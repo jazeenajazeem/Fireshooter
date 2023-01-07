@@ -13,6 +13,7 @@ public class Player extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int speed = 3;
+    int time = 0;
     public Player()
     {
      setImage(new GreenfootImage(70,50));
@@ -23,9 +24,11 @@ public class Player extends Actor
     }
     public void act()
     {
+        time++;
         turnAround();
         moveAround();
         fireProjectile();
+        youLose();
     }
     public void turnAround()
     {
@@ -49,6 +52,14 @@ public class Player extends Actor
            Projectile projectile = new Projectile();
            getWorld().addObject(projectile, getX(),getY());
            projectile.setRotation(getRotation());
+        }
     }
+    public void youLose()
+    {
+        if(isTouching(Zombie.class))
+        {
+            getWorld().showText("You Lose! - You Lasted " + (time/60) + " seconds",getWorld().getWidth()/2, getWorld().getHeight()/2);
+            Greenfoot.stop();
+        }
     }
 }
