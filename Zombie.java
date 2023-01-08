@@ -16,10 +16,12 @@ public class Zombie extends Actor
     //lower the animate speed for faster animation
     int animateSpeed = 5;
     int count;
-    int health = 5;
+    int health = 1;
     Player player;
-    public Zombie(Player mainPlayer)
+    Counter counter;
+    public Zombie(Player mainPlayer,Counter counter)
     {
+     this.counter = counter;
      player = mainPlayer;
      setImage("survivor-idle_handgun_16.png");
      getImage().scale(80,80);
@@ -58,6 +60,8 @@ public class Zombie extends Actor
             getWorld().removeObject(projectile);
         }
         if(health == 0)
+        counter.score++;
+        counter.money+=5;
         getWorld().removeObject(this);
     }
 }
