@@ -26,6 +26,11 @@ public class MyWorld extends World
         addObject(mainPlayer, getWidth()/2,getHeight()/2);
         addObject(counter, 130, 100);
     }
+    public Player getPlayer()
+    {
+        return mainPlayer;
+    }
+    
     public void act()
     {
         count++;
