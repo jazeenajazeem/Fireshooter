@@ -60,8 +60,12 @@ public class Zombie extends Actor
             getWorld().removeObject(projectile);
         }
         if(health == 0)
-        counter.score++;
-        counter.money+=5;
-        getWorld().removeObject(this);
+        {
+            counter.score++;
+            counter.money+=5;
+            getWorld().removeObject(this);
+        }
     }
+        
+    
 }

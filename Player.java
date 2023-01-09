@@ -28,7 +28,7 @@ public class Player extends Actor
         turnAround();
         moveAround();
         fireProjectile();
-        youLose();
+        hitByZombie();
     }
     public void turnAround()
     {
@@ -52,14 +52,18 @@ public class Player extends Actor
            Projectile projectile = new Projectile();
            getWorld().addObject(projectile, getX(),getY());
            projectile.setRotation(getRotation());
+           projectile.move(20);
         }
     }
-    public void youLose()
+    public boolean hitByZombie()
     {
-        if(isTouching(Zombie.class))
-        {
-            getWorld().showText("You Lose! - You Lasted " + (time/60) + " seconds",getWorld().getWidth()/2, getWorld().getHeight()/2);
-            Greenfoot.stop();
-        }
+    Actor zombie = getOneObjectAtOffset(0,0,Zombie.class);
+    if(zombie!=null)
+    
+    {
+       return true; 
     }
+    else
+    return false;
+}
 }
