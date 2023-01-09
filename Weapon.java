@@ -18,6 +18,6 @@ public class Weapon extends Actor
     }
     public void act()
     {
-        // Add your action code here.
+        // Weapon for the zombie
     }
 }
