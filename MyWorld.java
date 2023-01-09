@@ -19,12 +19,14 @@ public class MyWorld extends World
     int randomSpawn;
     public Player mainPlayer = new Player();
     Counter counter = new Counter();
+    HealthBar healthbar = new HealthBar();
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1); 
         addObject(mainPlayer, getWidth()/2,getHeight()/2);
         addObject(counter, 130, 100);
+        addObject(healthbar, mainPlayer.getX()-5, mainPlayer.getY()-50);
     }
     public Player getPlayer()
     {
