@@ -13,6 +13,7 @@ public class Player extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int speed = 3;
+    int time = 0;
     public Player()
     {
      setImage(new GreenfootImage(70,50));
@@ -23,9 +24,11 @@ public class Player extends Actor
     }
     public void act()
     {
+        time++;
         turnAround();
         moveAround();
         fireProjectile();
+        hitByZombie();
     }
     public void turnAround()
     {
@@ -49,6 +52,18 @@ public class Player extends Actor
            Projectile projectile = new Projectile();
            getWorld().addObject(projectile, getX(),getY());
            projectile.setRotation(getRotation());
+           projectile.move(20);
+        }
     }
+    public boolean hitByZombie()
+    {
+    Actor zombie = getOneObjectAtOffset(0,0,Zombie.class);
+    if(zombie!=null)
+    
+    {
+       return true; 
     }
+    else
+    return false;
+}
 }
