@@ -26,7 +26,7 @@ public class MyWorld extends World
         super(1000, 800, 1); 
         addObject(mainPlayer, getWidth()/2,getHeight()/2);
         addObject(counter, 130, 100);
-        addObject(healthbar, mainPlayer.getX()-5, mainPlayer.getY()-50);
+        addObject(healthbar, mainPlayer.getX()-5, mainPlayer.getY()-60);
     }
     public Player getPlayer()
     {
