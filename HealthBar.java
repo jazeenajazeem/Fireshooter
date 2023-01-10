@@ -19,6 +19,7 @@ public class HealthBar extends Actor
         getImage().drawRect(0,0,51,11);
         getImage().setColor(Color.RED);
         getImage().fillRect(1,1,health,10);
+        
     }
     public void act()
     {
@@ -26,6 +27,9 @@ public class HealthBar extends Actor
         getImage().drawRect(0,0,51,11);
         getImage().setColor(Color.RED);
         getImage().fillRect(1,1,health,10);
+        World world = getWorld();
+        MyWorld myWorld = (MyWorld)world;
+        setLocation(myWorld.getPlayer().getX()-5, myWorld.getPlayer().getY()-50);
         loseHealth();
     }
     public void loseHealth()
@@ -36,5 +40,10 @@ public class HealthBar extends Actor
         {
             health--;
         }
-    }
+        if(health<=0)
+        {
+          getWorld().showText("You Lose !\n You survived for" + (myWorld.getPlayer().time/60) + " seconds",getWorld().getWidth()/2, getWorld().getHeight()/2);
+          Greenfoot.stop();
+        }
+}
 }
