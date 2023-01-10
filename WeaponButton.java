@@ -6,18 +6,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Weapon extends Actor
+public class WeaponButton extends Actor
 {
     /**
      * Act - do whatever the Weapon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Weapon()
+    Counter counter;
+    public WeaponButton(Counter counter)
     {
-     
+     setImage(new GreenfootImage("Weapon  \n Upgrade",25, Color.BLACK,new Color(0,0,0,0)));
     }
     public void act()
     {
-        // Weapon for the zombie
+   if(Greenfoot.mousePressed(this))
+        {
     }
+}
 }
