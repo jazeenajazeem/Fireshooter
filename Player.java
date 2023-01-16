@@ -15,6 +15,8 @@ public class Player extends Actor
     int speed = 3;
     int time = 0;
     WeaponButton weaponButton;
+    SuperPower superPower;
+    int superTimer;
     public Player()
     {
      setImage(new GreenfootImage(70,50));
@@ -23,8 +25,9 @@ public class Player extends Actor
      getImage().setColor(Color.BLACK);
      getImage().fillRect(50,20,70,10);
     }
-    public Player(WeaponButton weaponButton)
+    public Player(WeaponButton weaponButton, SuperPower superPower)
     {
+     this.superPower = superPower;   
      this.weaponButton=weaponButton;
      setImage(new GreenfootImage(70,50));
      getImage().setColor(Color.RED);
@@ -90,6 +93,38 @@ public class Player extends Actor
            projectile3.move(20);
         }
         
+    }
+    public void superPowerUsed()
+    {
+        if(superPower.superCount >99 && superTimer < 30)
+        {
+            Projectile projectile = new Projectile();
+           getWorld().addObject(projectile, getX(),getY());
+           projectile.setRotation(getRotation() -10);
+           projectile.move(20);
+           Projectile projectile2 = new Projectile();
+           getWorld().addObject(projectile2, getX(),getY());
+           projectile2.setRotation(getRotation() +10);
+           projectile2.move(20);
+           Projectile projectile3 = new Projectile();
+           getWorld().addObject(projectile3, getX(),getY());
+           projectile3.setRotation(getRotation());
+           projectile3.move(20);
+           Projectile projectile1 = new Projectile();
+           getWorld().addObject(projectile1, getX(),getY());
+           projectile1.setRotation(getRotation() -10);
+           projectile1.move(20);
+           Projectile projectile21 = new Projectile();
+           getWorld().addObject(projectile21, getX(),getY());
+           projectile21.setRotation(getRotation() +10);
+           projectile21.move(20);
+           Projectile projectile31 = new Projectile();
+           getWorld().addObject(projectile3, getX(),getY());
+           projectile3.setRotation(getRotation());
+           projectile3.move(20);
+           superTimer++;
+        }
+
     }
     public boolean hitByZombie()
     {
