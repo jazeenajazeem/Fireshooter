@@ -21,6 +21,7 @@ public class MyWorld extends World
     Counter counter = new Counter();
     HealthBar healthbar = new HealthBar();
     WeaponButton weaponButton=new WeaponButton(counter);
+    SuperPower superPower=new SuperPower();
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -30,6 +31,7 @@ public class MyWorld extends World
         addObject(counter, 130, 100);
         addObject(healthbar, mainPlayer.getX()-5, mainPlayer.getY()-60);
         addObject(weaponButton,900,100);
+        addObject(superPower,mainPlayer.getX()+10,mainPlayer.getY()-80);
     }
     public Player getPlayer()
     {
