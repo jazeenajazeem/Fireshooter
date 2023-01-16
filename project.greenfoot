@@ -1,11 +1,12 @@
 #Greenfoot project file
-class.MyWorld.image=rivets.jpg
+class.MyWorld.image=2.jpeg
 class.Player.image=person.png
 class.Zombie.image=survivor-16.png
 dependency1.from=MyWorld
 dependency1.to=Player
 dependency1.type=UsesDependency
 dependency10.from=Zombie
+<<<<<<< HEAD
 dependency10.to=Counter
 dependency10.type=UsesDependency
 dependency11.from=Zombie
@@ -17,6 +18,16 @@ dependency12.type=UsesDependency
 dependency13.from=WeaponButton
 dependency13.to=Counter
 dependency13.type=UsesDependency
+=======
+dependency10.to=Projectile
+dependency10.type=UsesDependency
+dependency11.from=HealthBar
+dependency11.to=MyWorld
+dependency11.type=UsesDependency
+dependency12.from=WeaponButton
+dependency12.to=Counter
+dependency12.type=UsesDependency
+>>>>>>> cd1d490935cb66825288a9a29abf036ac5514530
 dependency2.from=MyWorld
 dependency2.to=Counter
 dependency2.type=UsesDependency
@@ -30,6 +41,7 @@ dependency5.from=MyWorld
 dependency5.to=Zombie
 dependency5.type=UsesDependency
 dependency6.from=Player
+<<<<<<< HEAD
 dependency6.to=WeaponButton
 dependency6.type=UsesDependency
 dependency7.from=Player
@@ -47,6 +59,25 @@ editor.fx.0.x=-7
 editor.fx.0.y=-7
 height=830
 package.numDependencies=13
+=======
+dependency6.to=Projectile
+dependency6.type=UsesDependency
+dependency7.from=Player
+dependency7.to=Zombie
+dependency7.type=UsesDependency
+dependency8.from=Zombie
+dependency8.to=Player
+dependency8.type=UsesDependency
+dependency9.from=Zombie
+dependency9.to=Counter
+dependency9.type=UsesDependency
+editor.fx.0.height=728
+editor.fx.0.width=800
+editor.fx.0.x=133
+editor.fx.0.y=49
+height=821
+package.numDependencies=12
+>>>>>>> cd1d490935cb66825288a9a29abf036ac5514530
 package.numTargets=7
 project.charset=UTF-8
 publish.hasSource=false
@@ -58,10 +89,14 @@ publish.title=
 publish.url=
 readme.height=60
 readme.name=@README
-readme.width=49
+readme.width=48
 readme.x=10
 readme.y=10
+<<<<<<< HEAD
 simulation.speed=45
+=======
+simulation.speed=47
+>>>>>>> cd1d490935cb66825288a9a29abf036ac5514530
 target1.height=70
 target1.name=Player
 target1.showInterface=false
@@ -112,7 +147,11 @@ target7.width=120
 target7.x=0
 target7.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=1550
+=======
+width=1244
+>>>>>>> cd1d490935cb66825288a9a29abf036ac5514530
 world.lastInstantiated=MyWorld
-xPosition=0
-yPosition=0
+xPosition=100
+yPosition=26

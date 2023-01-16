@@ -23,7 +23,7 @@ public class WeaponButton extends Actor
     { 
         if(Greenfoot.mousePressed(this) && counter.money>149)
         {
-           counter.money-=-150;
+           counter.money-=150;
            weaponUpgrade++;
         }
 }

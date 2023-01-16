@@ -68,26 +68,26 @@ public class Player extends Actor
         if(Greenfoot.mousePressed(null) && weaponButton.weaponUpgrade == 2){
            Projectile projectile = new Projectile();
            getWorld().addObject(projectile, getX(),getY());
-           projectile.setRotation(getRotation() -5);
+           projectile.setRotation(getRotation() -10);
            projectile.move(20);
            Projectile projectile2 = new Projectile();
            getWorld().addObject(projectile2, getX(),getY());
-           projectile2.setRotation(getRotation() + 5);
-           projectile2.move(5);
+           projectile2.setRotation(getRotation() + 10);
+           projectile2.move(20);
         }
         if(Greenfoot.mousePressed(null) && weaponButton.weaponUpgrade== 3){
            Projectile projectile = new Projectile();
            getWorld().addObject(projectile, getX(),getY());
-           projectile.setRotation(getRotation() -5);
+           projectile.setRotation(getRotation() -10);
            projectile.move(20);
            Projectile projectile2 = new Projectile();
            getWorld().addObject(projectile2, getX(),getY());
-           projectile2.setRotation(getRotation() +5);
-           projectile2.move(5);
+           projectile2.setRotation(getRotation() +10);
+           projectile2.move(20);
            Projectile projectile3 = new Projectile();
            getWorld().addObject(projectile3, getX(),getY());
            projectile3.setRotation(getRotation());
-           projectile3.move(5);
+           projectile3.move(20);
         }
         
     }
