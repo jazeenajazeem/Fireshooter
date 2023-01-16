@@ -41,6 +41,13 @@ public class MyWorld extends World
     public void act()
     {
         count++;
+        if(count % 600 == 0)
+        {
+            spawnSpeed--;
+        }
+        while(Greenfoot.isKeyDown("p")){
+        Greenfoot.delay(1);
+        }
         spawnZombies(); 
     }
     

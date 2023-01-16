@@ -16,7 +16,7 @@ public class Zombie extends Actor
     //lower the animate speed for faster animation
     int animateSpeed = 5;
     int count;
-    int health = 1;
+    int health = 2;
     Player player;
     Counter counter;
     public Zombie(Player mainPlayer,Counter counter)

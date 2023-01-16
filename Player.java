@@ -41,6 +41,7 @@ public class Player extends Actor
         turnAround();
         moveAround();
         fireProjectile();
+        superPowerUsed();
         hitByZombie();
     }
     public void turnAround()

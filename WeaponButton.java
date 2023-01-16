@@ -26,5 +26,7 @@ public class WeaponButton extends Actor
            counter.money-=150;
            weaponUpgrade++;
         }
+        if(weaponUpgrade>3)
+        weaponUpgrade=3;
 }
 }

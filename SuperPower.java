@@ -38,12 +38,9 @@ public class SuperPower extends Actor
     {
         count++;
         if(count % 5==0)
-        superCount++;
-        
-        if(superCount >= 100)
         {
-            superCount = 0;
+           superCount++;
         }
-        
+       
     }
 }
