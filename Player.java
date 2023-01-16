@@ -100,11 +100,11 @@ public class Player extends Actor
         {
             Projectile projectile = new Projectile();
            getWorld().addObject(projectile, getX(),getY());
-           projectile.setRotation(getRotation() -10);
+           projectile.setRotation(getRotation() -60);
            projectile.move(20);
            Projectile projectile2 = new Projectile();
            getWorld().addObject(projectile2, getX(),getY());
-           projectile2.setRotation(getRotation() +10);
+           projectile2.setRotation(getRotation() +60);
            projectile2.move(20);
            Projectile projectile3 = new Projectile();
            getWorld().addObject(projectile3, getX(),getY());
@@ -112,20 +112,24 @@ public class Player extends Actor
            projectile3.move(20);
            Projectile projectile1 = new Projectile();
            getWorld().addObject(projectile1, getX(),getY());
-           projectile1.setRotation(getRotation() -10);
+           projectile1.setRotation(getRotation() -180);
            projectile1.move(20);
            Projectile projectile21 = new Projectile();
            getWorld().addObject(projectile21, getX(),getY());
-           projectile21.setRotation(getRotation() +10);
+           projectile21.setRotation(getRotation() +120);
            projectile21.move(20);
            Projectile projectile31 = new Projectile();
-           getWorld().addObject(projectile3, getX(),getY());
-           projectile3.setRotation(getRotation());
-           projectile3.move(20);
+           getWorld().addObject(projectile31, getX(),getY());
+           projectile31.setRotation(getRotation() - 120);
+           projectile31.move(20);
            superTimer++;
         }
-
+        if(superTimer>29)
+        {
+            superPower.superCount = 0;
+            superTimer= 0;
     }
+}
     public boolean hitByZombie()
     {
     Actor zombie = getOneObjectAtOffset(0,0,Zombie.class);
