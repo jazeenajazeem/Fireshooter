@@ -24,7 +24,7 @@ public class Projectile extends Actor
         if(isAtEdge())
         {
             getWorld().removeObject(this);
-            
+            Greenfoot.playSound("gunshot1-connor_p-8650_hifi.mp3");
         }
     }
     
