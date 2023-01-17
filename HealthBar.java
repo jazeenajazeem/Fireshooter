@@ -36,7 +36,7 @@ public class HealthBar extends Actor
     {
         World world = getWorld();
         MyWorld myWorld = (MyWorld)world;
-        if(myWorld.getPlayer().hitByZombie())
+        if(myWorld.getPlayer().hitByEnemy())
         {
             health--;
         }

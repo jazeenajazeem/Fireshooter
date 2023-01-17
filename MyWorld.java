@@ -48,23 +48,23 @@ public class MyWorld extends World
         while(Greenfoot.isKeyDown("p")){
         Greenfoot.delay(1);
         }
-        spawnZombies(); 
+        spawnEnemies(); 
     }
     
-    public void spawnZombies()
+    public void spawnEnemies()
     {
         if(count % spawnSpeed == 0)
         {
             randomSpawn = Greenfoot.getRandomNumber(8);
             switch(randomSpawn){
-                case 0 : addObject(new Zombie(mainPlayer,counter),0,0);break;
-                case 1 : addObject (new Zombie(mainPlayer,counter),getWidth()/2,0);break;
-                case 2 : addObject (new Zombie(mainPlayer,counter),getWidth(),0);break;
-                case 3 : addObject (new Zombie(mainPlayer,counter),0,getHeight()/2);break;
-                case 4 : addObject (new Zombie(mainPlayer,counter),getWidth(),getHeight()/2);break;
-                case 5 : addObject (new Zombie(mainPlayer,counter),0,getHeight());break;
-                case 6 : addObject (new Zombie(mainPlayer,counter),getWidth()/2,getHeight());break;
-                case 7 : addObject (new Zombie(mainPlayer,counter),getWidth(),getHeight());break;
+                case 0 : addObject(new Enemy(mainPlayer,counter),0,0);break;
+                case 1 : addObject (new Enemy(mainPlayer,counter),getWidth()/2,0);break;
+                case 2 : addObject (new Enemy(mainPlayer,counter),getWidth(),0);break;
+                case 3 : addObject (new Enemy(mainPlayer,counter),0,getHeight()/2);break;
+                case 4 : addObject (new Enemy(mainPlayer,counter),getWidth(),getHeight()/2);break;
+                case 5 : addObject (new Enemy(mainPlayer,counter),0,getHeight());break;
+                case 6 : addObject (new Enemy(mainPlayer,counter),getWidth()/2,getHeight());break;
+                case 7 : addObject (new Enemy(mainPlayer,counter),getWidth(),getHeight());break;
             
             } 
     }

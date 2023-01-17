@@ -42,7 +42,7 @@ public class Player extends Actor
         moveAround();
         fireProjectile();
         superPowerUsed();
-        hitByZombie();
+        hitByEnemy();
     }
     public void turnAround()
     {
@@ -131,10 +131,10 @@ public class Player extends Actor
             superTimer= 0;
     }
 }
-    public boolean hitByZombie()
+    public boolean hitByEnemy()
     {
-    Actor zombie = getOneObjectAtOffset(0,0,Zombie.class);
-    if(zombie!=null)
+    Actor enemy = getOneObjectAtOffset(0,0,Enemy.class);
+    if(enemy!=null)
     
     {
        return true; 

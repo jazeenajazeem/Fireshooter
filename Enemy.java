@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Zombie here.
+ * Write a description of class Enemy here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Zombie extends Actor
+public class Enemy extends Actor
 {
     /**
-     * Act - do whatever the Zombie wants to do. This method is called whenever
+     * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int animateImage = 0;
@@ -19,7 +19,7 @@ public class Zombie extends Actor
     int health = 2;
     Player player;
     Counter counter;
-    public Zombie(Player mainPlayer,Counter counter)
+    public Enemy(Player mainPlayer,Counter counter)
     {
      this.counter = counter;
      player = mainPlayer;
@@ -33,7 +33,7 @@ public class Zombie extends Actor
         moveAround();
         hitByProjectile();
     }
-    //animate our zombie
+    //animate our Enemy
     public void animate()
     {
         if(count % animateSpeed ==0)
