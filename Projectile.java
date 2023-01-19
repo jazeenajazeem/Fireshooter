@@ -15,7 +15,7 @@ public class Projectile extends Actor
     public Projectile()
     {
         setImage(new GreenfootImage(10,2));
-        getImage().setColor(Color.GREEN);
+        getImage().setColor(Color.RED);
         getImage().fillRect(0,0,10,2);
     }
     public void act()
@@ -24,7 +24,7 @@ public class Projectile extends Actor
         if(isAtEdge())
         {
             getWorld().removeObject(this);
-            Greenfoot.playSound("gunshot1-connor_p-8650_hifi.mp3");
+            Greenfoot.playSound("pistol-shot.mp3");
         }
     }
     
