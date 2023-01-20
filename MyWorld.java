@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
+    //added Backgroud music as "run-vine-sound-effect.mp3" from non copyright music audio file
     GreenfootSound sounds = new GreenfootSound("run-vine-sound-effect.mp3");
 
     /**
@@ -15,9 +16,12 @@ public class MyWorld extends World
      * 
      */
     int count = 0;
-    //Spawn speed will be faster if you lower value of spawnSpeed.
+
+    //Spawn speed will be faster if you lower value of spawnSpeed, If increase the value slower.
+    //Spawn speed is declared to 30 to increase the speed of the spawn.
     int spawnSpeed = 30;
     int randomSpawn;
+    //
     public Player mainPlayer = new Player();
     Counter counter = new Counter();
     HealthBar healthbar = new HealthBar();
@@ -25,7 +29,7 @@ public class MyWorld extends World
     SuperPower superPower=new SuperPower();
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        //Created a new world with 400X600 with cell size of 1X1 pixels
         super(1000, 800, 1);
         mainPlayer=new Player(weaponButton,superPower);
         addObject(mainPlayer, getWidth()/2,getHeight()/2);
@@ -41,6 +45,7 @@ public class MyWorld extends World
     
     public void act()
     {
+        // Add sound
         sounds.play();
         count++;
         if(count % 600 == 0)
