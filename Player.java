@@ -65,7 +65,8 @@ public class Player extends Actor
         if(Greenfoot.isKeyDown("d"))
         setLocation(getX()+speed,getY());   
     }
-    
+    // null means nothing. But in this case it means if mouse Pressed no place in particular.."anywhere on the screen"
+    //add new projectile
     public void fireProjectile()
     {
         if(Greenfoot.mousePressed(null) && weaponButton.weaponUpgrade == 1){

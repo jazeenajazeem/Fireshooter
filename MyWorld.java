@@ -17,8 +17,8 @@ public class MyWorld extends World
      */
     int count = 0;
 
-    //Spawn speed will be faster if you lower value of spawnSpeed, If increase the value slower.
-    //Spawn speed is declared to 30 to increase the speed of the spawn.
+    //Spawnspeed will be faster if you lower value of spawnSpeed, If increase the value slower.
+    //Spawnspeed at 30 to increase the spawn speed.
     int spawnSpeed = 30;
     int randomSpawn;
     //
@@ -29,7 +29,7 @@ public class MyWorld extends World
     SuperPower superPower=new SuperPower();
     public MyWorld()
     {    
-        //Created a new world with 400X600 with cell size of 1X1 pixels
+    
         super(1000, 800, 1);
         mainPlayer=new Player(weaponButton,superPower);
         addObject(mainPlayer, getWidth()/2,getHeight()/2);
