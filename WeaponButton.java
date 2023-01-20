@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class Weapon here.
  * 
  * @author (your name) 
- * @version (a version number or a date)
+ * @version (a version number 4 or jan)
  */
 public class WeaponButton extends Actor
 {
@@ -12,6 +12,7 @@ public class WeaponButton extends Actor
      * Act - do whatever the Weapon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    //weapon upgraded and add color
     Counter counter;
     int weaponUpgrade= 1;
     public WeaponButton(Counter counter)
