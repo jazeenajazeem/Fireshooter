@@ -18,6 +18,7 @@ public class Enemy extends Actor
     int count;
     int health = 2;
     Player player;
+    //stored the counter so enemies can see throughout the class instead of the constructor
     Counter counter;
     public Enemy(Player mainPlayer,Counter counter)
     {
@@ -34,6 +35,7 @@ public class Enemy extends Actor
         hitByProjectile();
     }
     //animate our Enemy: used animated enemy with 16 images.
+    //if count divisible to animate speed is remainder 0 and if image is less than 16, then set to image
     public void animate()
     {
         if(count % animateSpeed ==0)
@@ -48,12 +50,15 @@ public class Enemy extends Actor
     }
     public void moveAround()
     {
+        //this will turn towards the player
         move(1);
         turnTowards(player.getX(),player.getY());        
     }
+    // created a reference to the projectile and can access it
     public void hitByProjectile()
     {
         Actor projectile = getOneIntersectingObject(Projectile.class);
+        // the if statement is checking if object is intersecting the enemy class
         if(projectile != null)
         {
             health--;
@@ -61,7 +66,10 @@ public class Enemy extends Actor
         }
         if(health == 0)
         {
+            //access the counter class and add to the score variable in the counter class
+            //score will go up by 1
             counter.score++;
+            //money(cash) will go up by 5
             counter.money+=5;
             getWorld().removeObject(this);
         }
