@@ -20,6 +20,7 @@ public class Enemy extends Actor
     Player player;
     //stored the counter so enemies can see throughout the class instead of the constructor
     Counter counter;
+    //in the Enemy class, there is the player and counter to access and read information
     public Enemy(Player mainPlayer,Counter counter)
     {
      this.counter = counter;
@@ -63,6 +64,7 @@ public class Enemy extends Actor
         //checking to see if any object is intersecting th enemy class, if its not equal to nothing then health-- and remove object, and the referenced project tile we want to remove.
         if(projectile != null)
         {
+            //when enemies get hit by projectile it lose health
             health--;
             getWorld().removeObject(projectile);
         }
