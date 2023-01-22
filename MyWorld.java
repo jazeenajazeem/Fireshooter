@@ -64,15 +64,22 @@ public class MyWorld extends World
     public void spawnEnemies()
     {
         //8 locations where the spawn enemies get added in the world and they will randomly go through all of these spawns
-        //Added a switch, the randomSpawn is the variable, added cases for the condition and command
+        //Added a switch with 8 cases as there will be 8 locations the enemies will be randomly coming 
         
         if(count % spawnSpeed == 0)
         {
+            //it gets a random number whenever it gets to spawn and assigns the location case 0 through case 7
+            //everytime we count and we have a new spawn everytime we count, we set random spawn equal to another greenfoot.getrandom number eight
             randomSpawn = Greenfoot.getRandomNumber(8);
+            // switch is if, randomSpawn is variable, and each cases are condition and commands
             switch(randomSpawn){
-                case 0 : addObject(new Enemy(mainPlayer,counter),0,0);break; //if randomspawn is 0, it will add object enemy and put the enemy to 0,0 location (x, y value)
-                case 1 : addObject (new Enemy(mainPlayer,counter),getWidth()/2,0);break; // we want the width to be half of the world and height to be 0.
+                //if randomspawn== 0, it will add object enemy and put the enemy to 0,0 location (x, y value)
+                //break is added to exit the case
+                case 0 : addObject(new Enemy(mainPlayer,counter),0,0);break; 
+                // if random spawn==1, we add enemy at this location, half of the width of the world and 0 for height.
+                case 1 : addObject (new Enemy(mainPlayer,counter),getWidth()/2,0);break;
                 case 2 : addObject (new Enemy(mainPlayer,counter),getWidth(),0);break;
+                // if random spawn==3, we add enemy at this location, half of the height and entire width.
                 case 3 : addObject (new Enemy(mainPlayer,counter),0,getHeight()/2);break;
                 case 4 : addObject (new Enemy(mainPlayer,counter),getWidth(),getHeight()/2);break;
                 case 5 : addObject (new Enemy(mainPlayer,counter),0,getHeight());break;
