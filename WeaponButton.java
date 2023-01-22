@@ -30,6 +30,7 @@ public class WeaponButton extends Actor
         if(Greenfoot.mousePressed(this) && counter.money>149)
         {
            counter.money-=150;
+           //create counter money and if score is more than 150 then weaponButton power is autumatically upgraded.
            weaponUpgrade++;
         }
         if(weaponUpgrade>3)

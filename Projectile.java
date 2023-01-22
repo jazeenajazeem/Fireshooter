@@ -8,10 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Projectile extends Actor
 {
-    /**
-     * Act - do whatever the Projectile wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
+    // Create Projectile Projectline Colour: RED
     public Projectile()
     {
         setImage(new GreenfootImage(10,2));
@@ -20,11 +18,12 @@ public class Projectile extends Actor
     }
     public void act()
     {
+        //move the Projectile , used Greenfoot.PlaySound:"pistol-shot.mp3" form free music store with no copyrights.
         move(10);
         if(isAtEdge())
         {
             getWorld().removeObject(this);
-            
+            Greenfoot.playSound("pistol-shot.mp3");
         }
     }
     

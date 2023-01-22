@@ -33,7 +33,7 @@ public class Enemy extends Actor
         moveAround();
         hitByProjectile();
     }
-    //animate our Enemy
+    //animate our Enemy: used animated enemy with 16 images.
     public void animate()
     {
         if(count % animateSpeed ==0)

@@ -6,6 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class Player extends Actor
 {
     /**
@@ -17,11 +18,14 @@ public class Player extends Actor
     WeaponButton weaponButton;
     SuperPower superPower;
     int superTimer;
+    // Create the Player: Player Colour: RED and BLACK using GreenfootImage and set the image size
     public Player()
     {
      setImage(new GreenfootImage(70,50));
+     //Create plarer using Oval shape: Colour: RED,
      getImage().setColor(Color.RED);
      getImage().fillOval(0, 0, 50, 50);
+     //Front part of the Player-Colour: BLACK
      getImage().setColor(Color.BLACK);
      getImage().fillRect(50,20,70,10);
     }
@@ -51,6 +55,7 @@ public class Player extends Actor
     }
     public void moveAround()
     {
+        //Used w,a,s,d for move the player up, Down, Left and Right
      if(Greenfoot.isKeyDown("w"))
         setLocation(getX(),getY() - speed);
         if(Greenfoot.isKeyDown("a"))
@@ -60,7 +65,8 @@ public class Player extends Actor
         if(Greenfoot.isKeyDown("d"))
         setLocation(getX()+speed,getY());   
     }
-    
+    // null means nothing. But in this case it means if mouse Pressed no place in particular.."anywhere on the screen"
+    //add new projectile
     public void fireProjectile()
     {
         if(Greenfoot.mousePressed(null) && weaponButton.weaponUpgrade == 1){
