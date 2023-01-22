@@ -15,14 +15,15 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    //intialised count to zero
     int count = 0;
-
     //Spawnspeed will be faster if you lower value of spawnSpeed, If increase the value slower.
     //Spawnspeed at 30 to increase the spawn speed.
     int spawnSpeed = 30;
     int randomSpawn;
     //
     public Player mainPlayer = new Player();
+    //created counter so counter can be accessed outside of my world
     Counter counter = new Counter();
     HealthBar healthbar = new HealthBar();
     WeaponButton weaponButton=new WeaponButton(counter);
@@ -33,6 +34,7 @@ public class MyWorld extends World
         super(1000, 800, 1);
         mainPlayer=new Player(weaponButton,superPower);
         addObject(mainPlayer, getWidth()/2,getHeight()/2);
+        //counter is placed on side so users can see enemies coming through the counter
         addObject(counter, 130, 100);
         addObject(healthbar, mainPlayer.getX()-5, mainPlayer.getY()-60);
         addObject(weaponButton,900,100);
@@ -47,6 +49,7 @@ public class MyWorld extends World
     {
         // Add sound
         sounds.play();
+        //count will change the count
         count++;
         if(count % 600 == 0)
         {
@@ -60,12 +63,15 @@ public class MyWorld extends World
     
     public void spawnEnemies()
     {
+        //8 locations where the spawn enemies get added in the world and they will randomly go through all of these spawns
+        //Added a switch, the randomSpawn is the variable, added cases for the condition and command
+        
         if(count % spawnSpeed == 0)
         {
             randomSpawn = Greenfoot.getRandomNumber(8);
             switch(randomSpawn){
-                case 0 : addObject(new Enemy(mainPlayer,counter),0,0);break;
-                case 1 : addObject (new Enemy(mainPlayer,counter),getWidth()/2,0);break;
+                case 0 : addObject(new Enemy(mainPlayer,counter),0,0);break; //if randomspawn is 0, it will add object enemy and put the enemy to 0,0 location (x, y value)
+                case 1 : addObject (new Enemy(mainPlayer,counter),getWidth()/2,0);break; // we want the width to be half of the world and height to be 0.
                 case 2 : addObject (new Enemy(mainPlayer,counter),getWidth(),0);break;
                 case 3 : addObject (new Enemy(mainPlayer,counter),0,getHeight()/2);break;
                 case 4 : addObject (new Enemy(mainPlayer,counter),getWidth(),getHeight()/2);break;
