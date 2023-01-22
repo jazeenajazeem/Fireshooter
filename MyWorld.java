@@ -21,9 +21,9 @@ public class MyWorld extends World
     //Spawnspeed at 30 to increase the spawn speed.
     int spawnSpeed = 30;
     int randomSpawn;
-    //
+    //onstructor created 
     public Player mainPlayer = new Player();
-    //created counter so counter can be accessed outside of my world
+    //created counter so counter can be accessed outside of world
     Counter counter = new Counter();
     HealthBar healthbar = new HealthBar();
     WeaponButton weaponButton=new WeaponButton(counter);
@@ -32,7 +32,9 @@ public class MyWorld extends World
     {    
     
         super(1000, 800, 1);
+        //main player is created and becomes it's own instance of new player
         mainPlayer=new Player(weaponButton,superPower);
+        //we have created our player
         addObject(mainPlayer, getWidth()/2,getHeight()/2);
         //counter is placed on side so users can see enemies coming through the counter
         addObject(counter, 130, 100);
@@ -42,6 +44,7 @@ public class MyWorld extends World
     }
     public Player getPlayer()
     {
+        //I created this method, where I created a main player object return type, getting the player from World class
         return mainPlayer;
     }
     
