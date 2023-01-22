@@ -23,6 +23,7 @@ public class Projectile extends Actor
         if(isAtEdge())
         {
             getWorld().removeObject(this);
+            //create the shooting sound
             Greenfoot.playSound("pistol-shot.mp3");
         }
     }

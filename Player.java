@@ -139,6 +139,7 @@ public class Player extends Actor
 }
     public boolean hitByEnemy()
     {
+    //when the enemy class is directly on top of the player the offset is 0,0
     Actor enemy = getOneObjectAtOffset(0,0,Enemy.class);
     if(enemy!=null)
     
