@@ -54,11 +54,13 @@ public class Enemy extends Actor
         move(1);
         turnTowards(player.getX(),player.getY());        
     }
-    // created a reference to the projectile and can access it
+    // projectiles hit the enemies, enemies get hit, if you get hit by projctile, removes enemies object
+    //lose health so it can get stronger and maker the game more intense
     public void hitByProjectile()
     {
         Actor projectile = getOneIntersectingObject(Projectile.class);
-        // the if statement is checking if object is intersecting the enemy class
+        // here I created a reference to the projectile and created and referenced the actor class to using 'getoneintersectingobject'.
+        //checking to see if any object is intersecting th enemy class, if its not equal to nothing then health-- and remove object, and the referenced project tile we want to remove.
         if(projectile != null)
         {
             health--;
@@ -66,7 +68,7 @@ public class Enemy extends Actor
         }
         if(health == 0)
         {
-            //access the counter class and add to the score variable in the counter class
+            //count.score- this accesses the counter class and add to the score variable in the counter class
             //score will go up by 1
             counter.score++;
             //money(cash) will go up by 5
