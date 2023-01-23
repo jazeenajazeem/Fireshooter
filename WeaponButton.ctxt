@@ -1,10 +1,6 @@
 #BlueJ class context
 comment0.target=WeaponButton
-<<<<<<< HEAD
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Weapon\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ 4\ or\ jan)\r\n
-=======
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Weapon\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
->>>>>>> 4cb1be332401848b34037fafb29d5dbe1de3f5a4
 comment1.params=counter
 comment1.target=WeaponButton(Counter)
 comment2.params=

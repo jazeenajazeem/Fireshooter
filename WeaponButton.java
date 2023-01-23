@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number 4 or jan)
  */
-//weapon button sub class is created and is inherited from Actor class
+//Weapon button sub class is created and is inherited from Actor class
 public class WeaponButton extends Actor
 {
     /**
@@ -30,7 +30,7 @@ public class WeaponButton extends Actor
         if(Greenfoot.mousePressed(this) && counter.money>149)
         {
            counter.money-=150;
-           //create counter money and if score is more than 150 then weaponButton power is autumatically upgraded.
+           //create counter money and if score is more than 150 then weaponButton power is automatically upgraded.
            weaponUpgrade++;
         }
         if(weaponUpgrade>3)
