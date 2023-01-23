@@ -105,26 +105,32 @@ public class Player extends Actor
     {
         if(superPower.superCount >99 && superTimer < 30)
         {
+            // Create Projectile for super power upgrade
             Projectile projectile = new Projectile();
            getWorld().addObject(projectile, getX(),getY());
            projectile.setRotation(getRotation() -60);
            projectile.move(20);
+           //Create Projectile2 for super power upgrade
            Projectile projectile2 = new Projectile();
            getWorld().addObject(projectile2, getX(),getY());
            projectile2.setRotation(getRotation() +60);
            projectile2.move(20);
+           //Create Projectile3 for super power upgrade
            Projectile projectile3 = new Projectile();
            getWorld().addObject(projectile3, getX(),getY());
            projectile3.setRotation(getRotation());
            projectile3.move(20);
+           //Create Projectlile1 for super power upgrade
            Projectile projectile1 = new Projectile();
            getWorld().addObject(projectile1, getX(),getY());
            projectile1.setRotation(getRotation() -180);
            projectile1.move(20);
+           //Create Projectlile21 for super power upgrade
            Projectile projectile21 = new Projectile();
            getWorld().addObject(projectile21, getX(),getY());
            projectile21.setRotation(getRotation() +120);
            projectile21.move(20);
+           //Create Projectlile31 for super power upgrade
            Projectile projectile31 = new Projectile();
            getWorld().addObject(projectile31, getX(),getY());
            projectile31.setRotation(getRotation() - 120);
