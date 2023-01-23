@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-// Create Projectile class
+// Create Projectile sub class
 public class Projectile extends Actor
 {
     
